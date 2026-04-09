@@ -1,0 +1,100 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+/* Main container */
+.container {
+    margin-top: 80px;
+    padding: 10px;
+}
+
+/* Heading */
+h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Announcement text */
+.announcement {
+    margin-top: 30px;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Countdown timer */
+.timer {
+    margin-top: 25px;
+    font-size: 32px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Form box */
+.form-box {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+/* Input field */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button hover */
+button:hover {
+    background: darkgreen;
+}
+
+/* Result output */
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+    .form-box {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .announcement {
+        font-size: 18px;
+    }
+
+    .timer {
+        font-size: 24px;
+    }
+}
