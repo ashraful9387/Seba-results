@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEBA HSLC Result 2026</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        text-align: center;
+    }
+
+    .container {
+        margin-top: 80px;
+    }
+
+    h1 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .announcement {
+        margin-top: 30px;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .timer {
+        margin-top: 25px;
+        font-size: 30px;
+        color: green;
+        font-weight: bold;
+    }
+
+    .form-box {
+        margin-top: 40px;
+        background: white;
+        padding: 20px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 0 10px gray;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .result {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Assam State School Education Board - ASSEB - Division - I</h1>
+
+    <div class="announcement">
+        HSLC EXAMINATION Results 2026 WILL BE DECLARED 10-04-2026 AT 10:30 A.M.
+    </div>
+
+    <div class="timer" id="countdown"></div>
+
+    <!-- Result Form -->
+    <div class="form-box">
+        <h3>Check Your Result</h3>
+        <input type="text" id="roll" placeholder="Enter Roll Number">
+        <br>
+        <button onclick="checkResult()">Submit</button>
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<script>
+    // Set target date (April 10, 2026, 10:30 AM)
+    let targetDate = new Date("April 10, 2026 10:30:00").getTime();
+
+    function updateCountdown() {
+        let now = new Date().getTime();
+        let diff = targetDate - now;
+
+        if (diff <= 0) {
+            document.getElementById("countdown").innerHTML = "Result Declared!";
+            return;
+        }
+
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    }
+
+    setInterval(updateCountdown, 1000);
+
+    // Fake result system
+    function checkResult() {
+        let roll = document.getElementById("roll").value;
+
+        if (roll === "") {
+            document.getElementById("result").innerHTML = "Enter Roll Number!";
+            return;
+        }
+
+        // Demo result (random)
+        let marks = Math.floor(Math.random() * 500);
+
+        document.getElementById("result").innerHTML =
+            "Roll: " + roll + "<br>Total Marks: " + marks + "<br>Status: PASS";
+    }
+</script>
+
+</body>
+</html>
